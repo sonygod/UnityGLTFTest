@@ -1,4 +1,5 @@
 
+![avatar](https://raw.githubusercontent.com/sonygod/UnityGLTFTest/master/screenshot/20190402180343.png)
 fork from https://github.com/KhronosGroup/UnityGLTF
 
 and fixed some bug for test ,version 2019-04-02

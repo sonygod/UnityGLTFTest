@@ -64,12 +64,12 @@ namespace UnityGLTF
             Debug.Log("start");
 
 
-	       
+            URLParameters.Instance.url = GLTFUri;
 
-            
-#if UNITY_WEBGL 
-            //var x = await URLParameters.Instance.RegisterOnDoneAsync();
-			   DebugText.text +="webgl\n";
+
+#if UNITY_WEBGL
+               //var x = await URLParameters.Instance.RegisterOnDoneAsync();
+               DebugText.text +="webgl\n";
             URLParameters.Instance.RegisterOnDone((up) =>
             {
 	            DebugText.text += "RegisterOnDone \n";
@@ -117,6 +117,11 @@ namespace UnityGLTF
                 string hl= URLParameters.Instance.Href;
                 DebugText.text += string.Format("hl={0}\n",hl);
                 Debug.Log(string.Format("hl ={0}\n", hl));
+
+                if (string.IsNullOrEmpty(hl))
+                {
+	                hl = GLTFUri;
+                }
                 var url = hl.Substring(0,hl.IndexOf("examples"));
 
 

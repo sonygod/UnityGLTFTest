@@ -30,7 +30,7 @@ https://github.com/cx20/gltf-test
 
 
 
-copy your webgl forder into examples/unity ,
+copy your build forder (../bin) into examples/unity ,
 
 maybe like :
 
